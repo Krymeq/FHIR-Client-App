@@ -1,7 +1,8 @@
 import React from 'react';
 import { removeNumbersFromString } from "../../utils";
+import { Redirect, useHistory } from 'react-router-dom'
 
-const Patient = props => {
+const PatientEntry = props => {
     const name = props.patient.resource.name[0];
     const birthDate = props.patient.resource.birthDate;
     return <div className = "patient-entry">
@@ -14,4 +15,4 @@ const Patient = props => {
     </div>
 }
 
-export default Patient;
+export default PatientEntry;

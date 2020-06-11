@@ -22,29 +22,30 @@
             padding: 20px;
 
             .table-header {
-                display: grid;
-                grid-template-columns: minmax(0, 5fr) minmax(0, 1fr);
-                padding: 10px 0px;
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 10px;
             }
 
             .name {
                 text-align: left;
             }
 
-            .birth-date {
-                text-align: center;  
-            }
-
             span {
                 padding: 0px 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
             }
             
             .patient-entry {
                 user-select: none;
-                display: grid;
-                grid-template-columns: minmax(0, 5fr) minmax(0, 1fr);
+                display: flex;
+                justify-content: space-between;
                 background-color: #def;
-                padding: 10px 0px;
+                padding: 10px 10px;
                 margin-bottom: 10px;
                 text-align: left;
                 transition: all 0.15s ease-in;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { serverURL } from '../../config';
-import Patient from './Patient';
+import { serverURL, appURL } from '../../config';
+import PatientEntry from './PatientEntry';
+import { Link } from 'react-router-dom';
 import './PatientList.scss';
 
 const PatientList = () =>{
@@ -27,7 +28,14 @@ const PatientList = () =>{
         fetchPatientsFromURL(url)
     }, [url]);
 
-    const tableRows = patients.map(patient => <Patient key={patient.resource.id} patient={patient}/>)
+    const tableRows = patients.map(
+        patient => 
+        <Link to={`/patient/${patient.resource.id}`}>
+            <PatientEntry
+                key={patient.resource.id} 
+                patient={patient}
+            />
+        </Link>)
 
     return (
     <div className="patient-page">
