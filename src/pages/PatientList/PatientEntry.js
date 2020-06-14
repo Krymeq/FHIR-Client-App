@@ -1,6 +1,5 @@
 import React from 'react';
 import { removeNumbersFromString } from "../../utils";
-import { Redirect, useHistory } from 'react-router-dom'
 
 const PatientEntry = props => {
     const name = props.patient.resource.name[0];

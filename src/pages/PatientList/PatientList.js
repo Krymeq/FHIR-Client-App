@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { serverURL, appURL } from '../../config';
+import { serverURL } from '../../config';
 import PatientEntry from './PatientEntry';
 import { Link } from 'react-router-dom';
 import './PatientList.scss';
