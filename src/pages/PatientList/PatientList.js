@@ -9,6 +9,7 @@ const PatientList = () =>{
     const [nextPage, setNextPage] = useState("");
     const [prevPage, setPrevPage] = useState("");
     const [url, setURL] = useState(`${serverURL}/Patient`);
+    const [name, setName] = useState("");
 
     const handleResponse = res => {
         const next = res.link.find(e => e.relation === "next");
@@ -46,6 +47,15 @@ const PatientList = () =>{
         </header>
         <main>
             <div className="patient-list">
+                <div className="search-panel">
+                    <div className="label-container">
+                        <span>Name:</span>
+                        <input value={name} onChange={e => setName(e.target.value)}/>
+                    </div>
+                    <button onClick = {() => {setURL(`${serverURL}/Patient?name=${name}`)}}>
+                        Search
+                    </button>
+                </div>
                 <div className="table-header">
                     <span className="name">
                         Name

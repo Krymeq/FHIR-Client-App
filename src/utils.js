@@ -45,9 +45,7 @@ export const dateToString = date => {
     const [
         { value: month },,
         { value: day },,
-        { value: year },,
-        {value: hour},,
-        {value: minute}] = dateTimeFormat.formatToParts(date);
-    const formattedDate = `${day} ${month} ${year} ${hour}:${minute}`;
+        { value: year }] = dateTimeFormat.formatToParts(date);
+    const formattedDate = `${day} ${month} ${year}`;
     return formattedDate;
 }

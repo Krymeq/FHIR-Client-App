@@ -108,6 +108,9 @@ const PatientData = () => {
                 <Link to={`/medications/${id}`}>
                     <span>Medications</span>
                 </Link>
+                <Link to={`/observations/${id}`}>
+                    <span>Observations</span>
+                </Link>
             </div>
         </main>
     </div>)

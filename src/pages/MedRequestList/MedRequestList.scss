@@ -13,8 +13,27 @@
 
     main {
         display: flex;
-        align-items: center;
-        flex-direction: column;
+        justify-content: center;
+        
+        .date-picker-container {
+            display: flex;
+            flex-direction: column;
+
+            .date-picker {
+                margin: 20px;
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.12);
+                border-radius: 8px;
+                
+                .padding {
+                    padding: 10px;
+                }
+            }
+        }
+
         .content-container {
             display: flex;
             flex-direction: column;
@@ -58,22 +77,27 @@
                 }
             }
         }
+        .links { 
+            display: flex;
+            justify-content: space-evenly;
 
-        a {
-            display: inline-block;
-            text-decoration: none;
-            background-color: #669;
-            border-radius: 6px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            transition: all 0.02s ease-in;
-            width: 100px;
-
-            &:hover {
-                box-shadow: 0px 0px 2px 2px #77a;
-                background-color: #88c;
+            a, button {
+                display: inline-block;
+                text-decoration: none;
+                background-color: #669;
+                font-size: 15px;
+                border-radius: 6px;
+                color: white;
+                border: none;
+                cursor: pointer;
+                padding: 8px;
+                transition: all 0.02s ease-in;
+                width: 100px;
+    
+                &:hover {
+                    box-shadow: 0px 0px 2px 2px #77a;
+                    background-color: #88c;
+                }
             }
         }
     }
