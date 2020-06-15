@@ -52,7 +52,9 @@ const PatientList = () =>{
                         <span>Name:</span>
                         <input value={name} onChange={e => setName(e.target.value)}/>
                     </div>
-                    <button onClick = {() => {setURL(`${serverURL}/Patient?name=${name}`)}}>
+                    {/* this weird assignment on setURL assigns URL parameter Name when name is not empty,
+                    not adding any parameter otherwise */}
+                    <button onClick = {() => {setURL(`${serverURL}/Patient${name != "" ? `?name=${name}`: ""}`)}}>
                         Search
                     </button>
                 </div>
